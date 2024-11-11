@@ -1,0 +1,3 @@
+prepare:
+ - IM_WIDTH: 224
+ - IM_HEIGHT: 224

@@ -1,0 +1,8 @@
+stages:
+  prepare:
+    cmd: python pipelines/prepare_data.py
+    deps:
+      - data/raw
+    params:
+      - prepare.IM_WIDTH
+      - prepare.IM_HEIGHT
