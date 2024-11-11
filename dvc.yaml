@@ -2,7 +2,14 @@ stages:
   prepare:
     cmd: python pipelines/prepare_data.py
     deps:
-      - data/raw
+    - data/raw
     params:
-      - prepare.IM_WIDTH
-      - prepare.IM_HEIGHT
+    - prepare.IM_WIDTH
+    - prepare.IM_HEIGHT
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
