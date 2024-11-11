@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python pipelines/prepare_data.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: eb0babc90aad961e3097fe6f5d1e24c7.dir
+      size: 571915376
+      nfiles: 25000
+    params:
+      params.yaml:
+        prepare.IM_HEIGHT: 224
+        prepare.IM_WIDTH: 224
