@@ -6,6 +6,15 @@ stages:
     params:
     - prepare.IM_WIDTH
     - prepare.IM_HEIGHT
+  train:
+    cmd: python ml/train.py
+    deps:
+    - data/interim
+    params:
+    - train.NUM_EPOCHS
+    - train.LEARNING_RATE
+    - train.TRANSFORMS
+
 params:
 - dvclive/params.yaml
 metrics:
@@ -13,3 +22,7 @@ metrics:
 plots:
 - dvclive/plots/metrics:
     x: step
+artifacts:
+  ipreferdogs:
+    path: model.pt
+    type: model

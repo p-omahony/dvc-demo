@@ -21,7 +21,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs, device):
     with Live() as live:
         live.log_param('num_epochs', num_epochs)
         live.log_param('learning_rate', LEARNING_RATE)
-        live.log_param('trasformations', 'Normalize')
+        live.log_param('transformations', 'Normalize')
         for epoch in range(num_epochs):
             print(f"Epoch {epoch + 1}/{num_epochs}")
             print("-" * 20)
@@ -63,6 +63,8 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs, device):
                 print(f"{phase.capitalize()} Loss: {epoch_loss:.4f} Acc: {epoch_acc:.4f}")
 
         print("Training complete")
+        torch.save(model, "model.pt")
+        live.log_artifact('model.pt', type='model', name='ipreferdogs')
     return model
 
 

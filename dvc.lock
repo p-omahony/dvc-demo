@@ -12,3 +12,16 @@ stages:
       params.yaml:
         prepare.IM_HEIGHT: 224
         prepare.IM_WIDTH: 224
+  train:
+    cmd: python ml/train.py
+    deps:
+    - path: data/interim
+      hash: md5
+      md5: 3d0260ecff674a76d826445f24d71aca.dir
+      size: 238008273
+      nfiles: 25000
+    params:
+      params.yaml:
+        train.LEARNING_RATE: 0.001
+        train.NUM_EPOCHS: 6
+        train.TRANSFORMS: Normalize
