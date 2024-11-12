@@ -10,8 +10,8 @@ stages:
       nfiles: 25000
     params:
       params.yaml:
-        prepare.IM_HEIGHT: 224
-        prepare.IM_WIDTH: 224
+        prepare.IM_HEIGHT: 128
+        prepare.IM_WIDTH: 128
   train:
     cmd: python ml/train.py
     deps:

@@ -1,6 +1,6 @@
 prepare:
-  IM_WIDTH: 224
-  IM_HEIGHT: 224
+  IM_WIDTH: 128
+  IM_HEIGHT: 128
 train:
   NUM_EPOCHS: 6
   LEARNING_RATE: 0.001

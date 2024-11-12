@@ -15,11 +15,8 @@ INTERIM_DATA_PATH = Path('data/interim')
 TRAIN_INTERIM_DATA_PATH = INTERIM_DATA_PATH / 'train'
 TEST_INTERIM_DATA_PATH = INTERIM_DATA_PATH / 'test'
 
-IM_WIDTH = 224
-IM_HEIGHT = 224
-
 def resize_image(im: Image):
-    return im.resize((IM_WIDTH, IM_HEIGHT))
+    return im.resize((NEW_IM_WIDTH, NEW_IM_HEIGHT))
 
 def process_image(im_path: Path, output_dir: Path):
     im = Image.open(im_path).convert('RGB')
