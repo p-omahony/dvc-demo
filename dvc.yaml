@@ -17,12 +17,12 @@ stages:
 
 params:
 - dvclive/params.yaml
+artifacts:
+  ipreferdogs:
+    path: model.pt
+    type: model
 metrics:
 - dvclive/metrics.json
 plots:
 - dvclive/plots/metrics:
     x: step
-artifacts:
-  ipreferdogs:
-    path: model.pt
-    type: model

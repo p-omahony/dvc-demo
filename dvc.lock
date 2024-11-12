@@ -10,15 +10,15 @@ stages:
       nfiles: 25000
     params:
       params.yaml:
-        prepare.IM_HEIGHT: 128
-        prepare.IM_WIDTH: 128
+        prepare.IM_HEIGHT: 64
+        prepare.IM_WIDTH: 64
   train:
     cmd: python ml/train.py
     deps:
     - path: data/interim
       hash: md5
-      md5: af4552eafc151388cbba16303e02f5a4.dir
-      size: 99974819
+      md5: 590c93bd67742526bfbbd308203e4b9a.dir
+      size: 41402656
       nfiles: 25000
     params:
       params.yaml:
